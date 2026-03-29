@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio | Certifications</title>
+  <link rel="stylesheet" href="style.css">
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+/>
+</head>
+<body>
+  <header>
+    <nav>
+      <h1>My Portfolio</h1>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="academics.html">Academics</a></li>
+        <li><a href="Clubs.html">Clubs</a></li>
+        <li><a href="activites.html" class="active">Activities</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Activities & Achievements</h2>
+
+    <section class="semester">
+      <h3>Innovision 2K26:</h3>
+      <img src="images/image1.png" alt="Certificate">
+      <p>I actively participated in ACBS Abhudhya 3.0 as a Decoration Team Member and Volunteer. I assisted with event setup, decoration, and coordination to ensure smooth execution of the program. This experience improved my teamwork, communication, and event management skills.</p>
+    </section>
+
+    <section class="semester">
+      <h3>FGotham AI:</h3>
+      <img src="images/image2.png" alt="Certificate">
+      <p>Gotham AI is a club that organized its inauguration event, featuring expert speakers who conducted sessions on Artificial Intelligence. I worked as the Event Management Lead, managing planning and coordination to ensure smooth execution. The event was successfully conducted through effective teamwork and organization</p>
+    </section>
+
+    <section class="semester">
+      <h3>NSS: Shivjayanti Event (24 Feb 2026)</h3>
+      <img src="images/image3.png" alt="Certificate">
+      <p>Attended and volunteered at the Shiv Jayanti Function organized by the National Service Scheme (NSS) Club, contributing to the smooth coordination and management of the event. The experience strengthened my leadership, teamwork, and event management skills while actively participating in a culturally significant celebration.
+</p>
+    </section>
+        <section class="semester">
+      <h3>NSS : CYCLYTHON (2026)</h3>
+      <img src="images/image4.png" alt="Certificate">
+      <p>Volunteered for Cyclothon 2026 organized by the National Service Scheme (NSS), supporting event coordination and promoting fitness and social awareness. The experience strengthened my teamwork, leadership, and sense of community responsibility.
+</p>
+    </section>
+    <section class="semester">
+      <h3>Abhyudaya 3.0</h3>
+      <img src="images/image5.png" alt="Certificate">
+      <p>Participated in Abhyudaya 3.0, a national-level hackathon organized by JSPM’s Rajarshi Shahu College of Engineering department Computer Science and Business System, where innovative solutions were developed to address real-world techno-social challenges. The competition enhanced my problem-solving skills, teamwork, and ability to think creatively under time constraints.
+
+</p>
+    </section>
+        <section class="semester">
+      <h3>Participation in Gandharva(2026) Girls Volleyball Tournament</h3>
+      <img src="images/image6.png" alt="Certificate">
+      <p>PParticipated in the Girls Volleyball Tournament, which enhanced my teamwork, coordination, and athletic abilities. Through regular practice sessions and competitive matches, I improved my serving, passing, and spiking techniques. The experience strengthened my communication skills and on-court decision-making under pressure. Overall, this tournament boosted my confidence and sportsmanship while encouraging a strong team spirit.
+
+</p>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 My Portfolio. All rights reserved.</p>
+  </footer>
+
+  <script src="menu.js"></script>
+    <script>
+  // === Image Modal ===
+  const modal = document.createElement("div");
+  modal.id = "imgModal";
+  modal.innerHTML = `
+    <div class="modal-content">
+      <img id="modalImg" src="" alt="Preview">
+    </div>
+  `;
+  document.body.appendChild(modal);
+
+  const modalImg = document.getElementById("modalImg");
+  const images = document.querySelectorAll(".semester img");
+
+  images.forEach(img => {
+    img.addEventListener("click", () => {
+      modalImg.src = img.src;
+      modal.style.display = "flex";
+    });
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal || e.target === modalImg) {
+      modal.style.display = "none";
+    }
+  });
+</script>
+</body>
+</html>
